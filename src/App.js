@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import { useState } from 'react';
+
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './components/Main';
 
 function App() {
-  const [name, setName] = useState("");
 
-  const handleNameChange = () => {
-    let names = ["Neelesh", "Sachi", "Geetha"];
-    let i = Math.floor(Math.random() * 3);
-    // return names[i];
-    setName(names[i]);
-  }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={handleNameChange}>Change Name</button>
-        <p>Hello, {name}</p>
+      <Header />
+      <Main />
+      <Footer />
 
-      </header>
     </div>
   );
 }
